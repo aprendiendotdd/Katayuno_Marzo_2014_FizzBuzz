@@ -13,10 +13,15 @@ namespace FizzBuzzTest
       [Test]
       public void ReturnStringOneWhenIntegerOne()
       {
-        string expected = "1";
-        FizzBuzz.FizzBuzz fizzBuzz = new FizzBuzz.FizzBuzz();
-        string actual = fizzBuzz.Game(1);
-        Assert.AreEqual(expected, actual);
+        var fizzBuzz = new FizzBuzz.FizzBuzz();
+        Assert.AreEqual("1", fizzBuzz.Game(1));
+      }
+
+      [Test]
+      public void ReturnStringTwoWhenIntegerTwo()
+      {
+        var fizzBuzz = new FizzBuzz.FizzBuzz();
+        Assert.AreEqual("2", fizzBuzz.Game(2));
       }
     }
 }
