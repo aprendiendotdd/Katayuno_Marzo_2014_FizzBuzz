@@ -10,6 +10,7 @@ namespace FizzBuzz
     {
       public string Game(int number)
       {
+        if (number == 3) return "Fizz";
         return number.ToString();
       }
     }

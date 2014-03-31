@@ -30,5 +30,12 @@ namespace FizzBuzzTest
         var fizzBuzz = new FizzBuzz.FizzBuzz();
         Assert.AreEqual("4", fizzBuzz.Game(4));
       }
+
+      [Test]
+      public void ReturnFizzWhenThree()
+      {
+        var fizzBuzz = new FizzBuzz.FizzBuzz();
+        Assert.AreEqual("Fizz", fizzBuzz.Game(3));
+      }
     }
 }
