@@ -69,5 +69,12 @@ namespace FizzBuzzTest
     {
       Assert.AreEqual(expected, _fizzBuzz.Game(actual));
     }
+
+    [TestCase(52, "Buzz")]
+    [TestCase(58, "Buzz")]
+    public void ReturnBuzzWhenContainsFive(int actual, string expected)
+    {
+      Assert.AreEqual(expected, _fizzBuzz.Game(actual));
+    }
   }
 }
