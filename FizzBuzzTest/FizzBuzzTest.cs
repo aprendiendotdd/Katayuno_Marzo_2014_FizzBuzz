@@ -23,5 +23,12 @@ namespace FizzBuzzTest
         var fizzBuzz = new FizzBuzz.FizzBuzz();
         Assert.AreEqual("2", fizzBuzz.Game(2));
       }
+
+      [Test]
+      public void ReturnStringFourWhenIntegerFour()
+      {
+        var fizzBuzz = new FizzBuzz.FizzBuzz();
+        Assert.AreEqual("4", fizzBuzz.Game(4));
+      }
     }
 }
