@@ -38,7 +38,7 @@ namespace FizzBuzz
     public List<string> ListGame()
     {
       var listFizzBuzz = new List<string>();
-      for (var i = 0; i < 100; i++)
+      for (var i = 1; i < 101; i++)
         listFizzBuzz.Add(Game(i));
       
       return listFizzBuzz;

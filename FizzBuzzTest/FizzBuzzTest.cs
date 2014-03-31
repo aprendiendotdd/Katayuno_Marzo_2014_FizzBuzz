@@ -89,5 +89,11 @@ namespace FizzBuzzTest
     {
       Assert.AreEqual(100, _fizzBuzz.ListGame().Count);
     }
+
+    [Test]
+    public void FirstElementIsOne()
+    {
+      Assert.AreEqual("1", _fizzBuzz.ListGame()[0].ToString());
+    }
   }
 }
