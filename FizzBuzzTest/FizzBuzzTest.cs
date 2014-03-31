@@ -52,5 +52,13 @@ namespace FizzBuzzTest
         var fizzBuzz = new FizzBuzz.FizzBuzz();
         Assert.AreEqual("Buzz", fizzBuzz.Game(5));
       }
+
+      [TestCase(10, "Buzz")]
+      [TestCase(15, "Buzz")]
+      public void ReturnBuzzWhenDivisibleByFive(int actual, string expected)
+      {
+        var fizzBuzz = new FizzBuzz.FizzBuzz();
+        Assert.AreEqual(expected, fizzBuzz.Game(actual));
+      }
     }
 }
