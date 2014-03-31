@@ -1,19 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace FizzBuzz
+﻿namespace FizzBuzz
 {
-    public class FizzBuzz
+  public class FizzBuzz
+  {
+    private const string Buzz = "Buzz";
+    private const string Fizz = "Fizz";
+    private const int Three = 3;
+    private const int Five = 5;
+    public string Game(int number)
     {
-      public string Game(int number)
-      {
-        if (number % 3 == 0 && number % 5 == 0) return "FizzBuzz";
-        if (number % 5 == 0) return "Buzz";
-        if (number % 3 == 0) return "Fizz";
-        return number.ToString();
-      }
+      if (IsDivisible(number, Three) && IsDivisible(number, Five)) return Fizz + Buzz;
+      if (IsDivisible(number, Five)) return Buzz;
+      return IsDivisible(number, Three) ? Fizz : number.ToString();
     }
+
+    private static bool IsDivisible(int number, int value)
+    {
+      return number % value == 0;
+    }
+  }
 }
