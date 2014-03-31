@@ -37,5 +37,13 @@ namespace FizzBuzzTest
         var fizzBuzz = new FizzBuzz.FizzBuzz();
         Assert.AreEqual("Fizz", fizzBuzz.Game(3));
       }
+      
+      [TestCase(6, "Fizz")]
+      [TestCase(9, "Fizz")]
+      public void ReturnFizzWhenDivisibleByThree(int actual, string expected)
+      {
+        var fizzBuzz = new FizzBuzz.FizzBuzz();
+        Assert.AreEqual(expected, fizzBuzz.Game(actual));
+      }
     }
 }
