@@ -8,7 +8,7 @@
     private const int Five = 5;
     public string Game(int number)
     {
-      if (IsDivisible(number, Three) && IsDivisible(number, Five)) return Fizz + Buzz;
+      if ((IsDivisible(number, Three) || ContainsValue(number, Three)) && (IsDivisible(number, Five) || ContainsValue(number, Five))) return Fizz + Buzz;
       if (IsDivisible(number, Five) || ContainsValue(number, Five)) return Buzz;
       return IsDivisible(number, Three) || ContainsValue(number, Three) ? Fizz : number.ToString();
     }
