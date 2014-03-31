@@ -1,4 +1,6 @@
-﻿namespace FizzBuzz
+﻿using System.Collections.Generic;
+
+namespace FizzBuzz
 {
   public class FizzBuzz
   {
@@ -31,6 +33,15 @@
     private static bool IsDivisible(int number, int value)
     {
       return number % value == 0;
+    }
+
+    public List<string> ListGame()
+    {
+      var listFizzBuzz = new List<string>();
+      for (var i = 0; i < 100; i++)
+        listFizzBuzz.Add(Game(i));
+      
+      return listFizzBuzz;
     }
   }
 }

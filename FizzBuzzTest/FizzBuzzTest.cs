@@ -83,5 +83,11 @@ namespace FizzBuzzTest
     {
       Assert.AreEqual(expected, _fizzBuzz.Game(actual));
     }
+
+    [Test]
+    public void ReturnOneHundredElements()
+    {
+      Assert.AreEqual(100, _fizzBuzz.ListGame().Count);
+    }
   }
 }
