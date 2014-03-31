@@ -45,5 +45,12 @@ namespace FizzBuzzTest
         var fizzBuzz = new FizzBuzz.FizzBuzz();
         Assert.AreEqual(expected, fizzBuzz.Game(actual));
       }
+
+      [Test]
+      public void ReturnBuzzWhenFive()
+      {
+        var fizzBuzz = new FizzBuzz.FizzBuzz();
+        Assert.AreEqual("Buzz", fizzBuzz.Game(5));
+      }
     }
 }
