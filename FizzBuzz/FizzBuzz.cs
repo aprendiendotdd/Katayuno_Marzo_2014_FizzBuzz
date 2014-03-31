@@ -8,9 +8,19 @@
     private const int Five = 5;
     public string Game(int number)
     {
-      if ((IsDivisible(number, Three) || ContainsValue(number, Three)) && (IsDivisible(number, Five) || ContainsValue(number, Five))) return Fizz + Buzz;
-      if (IsDivisible(number, Five) || ContainsValue(number, Five)) return Buzz;
-      return IsDivisible(number, Three) || ContainsValue(number, Three) ? Fizz : number.ToString();
+      if (IsFizz(number) && IsBuzz(number)) return Fizz + Buzz;
+      if (IsBuzz(number)) return Buzz;
+      return IsFizz(number) ? Fizz : number.ToString();
+    }
+
+    private static bool IsBuzz(int number)
+    {
+      return IsDivisible(number, Five) || ContainsValue(number, Five);
+    }
+
+    private static bool IsFizz(int number)
+    {
+      return IsDivisible(number, Three) || ContainsValue(number, Three);
     }
 
     private static bool ContainsValue(int number, int value)
