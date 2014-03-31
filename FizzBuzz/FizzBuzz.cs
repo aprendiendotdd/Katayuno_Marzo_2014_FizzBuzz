@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace FizzBuzz
 {
-    public class Class1
+    public class FizzBuzz
     {
+      public string Game(int number)
+      {
+        return "1";
+      }
     }
 }
