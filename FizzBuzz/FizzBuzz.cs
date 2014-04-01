@@ -8,11 +8,21 @@ namespace FizzBuzz
     private const string Fizz = "Fizz";
     private const int Three = 3;
     private const int Five = 5;
+
     public string Game(int number)
     {
       if (IsFizz(number) && IsBuzz(number)) return Fizz + Buzz;
       if (IsBuzz(number)) return Buzz;
       return IsFizz(number) ? Fizz : number.ToString();
+    }
+
+    public List<string> ListGame()
+    {
+      var listFizzBuzz = new List<string>();
+      for (var i = 1; i < 101; i++)
+        listFizzBuzz.Add(Game(i));
+
+      return listFizzBuzz;
     }
 
     private static bool IsBuzz(int number)
@@ -33,15 +43,6 @@ namespace FizzBuzz
     private static bool IsDivisible(int number, int value)
     {
       return number % value == 0;
-    }
-
-    public List<string> ListGame()
-    {
-      var listFizzBuzz = new List<string>();
-      for (var i = 1; i < 101; i++)
-        listFizzBuzz.Add(Game(i));
-      
-      return listFizzBuzz;
     }
   }
 }
